@@ -1,0 +1,239 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/InputsMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/PlayerSlider.gd" type="Script" id=2]
+[ext_resource path="res://Props/JumpFont.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/PlayerButtonConfigs.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Props/ButtonSFX.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[node name="InputsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.231373, 0.0235294, 0.537255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerConfigArray" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerConfigs1" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_top = 23.0
+margin_bottom = 77.0
+
+[node name="PlayerConfigs2" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_left = 414.0
+margin_top = 23.0
+margin_right = 762.0
+margin_bottom = 77.0
+
+[node name="PlayerConfigs3" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_top = 113.0
+margin_bottom = 167.0
+
+[node name="PlayerConfigs4" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_left = 414.0
+margin_top = 113.0
+margin_right = 762.0
+margin_bottom = 167.0
+
+[node name="PlayerConfigs5" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_top = 203.0
+margin_bottom = 257.0
+
+[node name="PlayerConfigs6" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_left = 414.0
+margin_top = 203.0
+margin_right = 762.0
+margin_bottom = 257.0
+
+[node name="PlayerConfigs7" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_top = 293.0
+margin_bottom = 347.0
+
+[node name="PlayerConfigs8" parent="PlayerConfigArray" instance=ExtResource( 4 )]
+margin_left = 414.0
+margin_top = 293.0
+margin_right = 762.0
+margin_bottom = 347.0
+
+[node name="PlayerSlider" type="HSlider" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 264.0
+margin_top = 378.0
+margin_right = -422.0
+margin_bottom = -29.0
+min_value = 2.0
+max_value = 8.0
+value = 2.0
+ticks_on_borders = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerCount" type="Label" parent="PlayerSlider"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.0
+margin_top = 5.5
+margin_right = 27.0
+margin_bottom = 19.5
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PlayerSlider"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -27.5
+margin_right = 43.0
+margin_bottom = -9.5
+custom_fonts/font = SubResource( 1 )
+text = "Players"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TimeLimit" type="HSlider" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 126.0
+margin_top = 378.0
+margin_right = -560.0
+margin_bottom = -29.0
+min_value = 20.0
+max_value = 300.0
+step = 5.0
+value = 120.0
+ticks_on_borders = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeCount" type="Label" parent="TimeLimit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.0
+margin_top = 5.5
+margin_right = 27.0
+margin_bottom = 19.5
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TimeLimit"]
+anchor_left = 0.45614
+anchor_top = 0.5
+anchor_right = 0.464912
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -27.5
+margin_right = 43.0
+margin_bottom = -9.5
+custom_fonts/font = SubResource( 1 )
+text = "Time limit"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlayButton" type="TextureButton" parent="."]
+margin_left = 414.0
+margin_top = 378.0
+margin_right = 558.0
+margin_bottom = 418.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PlayButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.211765, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PlayButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "PLAY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 576.0
+margin_top = 378.0
+margin_right = 720.0
+margin_bottom = 418.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.211765, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "BACK"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSFX" parent="." instance=ExtResource( 5 )]
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
